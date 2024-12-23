@@ -1,17 +1,16 @@
 {
   "name": "image-hosting-service",
   "version": "1.0.0",
-  "description": "Image hosting service with GitHub storage",
+  "description": "GitHub based image hosting service",
   "main": "index.js",
   "scripts": {
     "dev": "wrangler pages dev public --port 4566",
-    "deploy": "wrangler pages deploy"
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
-    "@octokit/rest": "^19.0.7",
-    "uuid": "^9.0.0"
+    "@octokit/rest": "^20.0.0"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^3.99.0"
   }
 } 
