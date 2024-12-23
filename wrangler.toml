@@ -1,16 +1,20 @@
-name = "image-hosting-service"
-compatibility_date = "2024-01-01"
-
-[vars]
-GITHUB_OWNER = "Aiky156"
-GITHUB_REPO = "tuchuangkangku"
-
-[build]
-command = "npm install"
-output_dir = "public"
-
-[site]
-bucket = "./public"
-
-[build.upload]
-format = "service-worker"
+  name = "image-hosting-service"
+  compatibility_date = "2024-01-01"
+  
+  [vars]
+  GITHUB_OWNER = "Aiky156"
+  GITHUB_REPO = "tuchuangkangku"
+  
+  [build]
+  command = "npm install"
+  output_dir = "public"
+  
+  [site]
+  bucket = "./public"
+  
+  [build.upload]
+  format = "service-worker"
++ 
++ # 添加外部依赖配置
++ [build.external]
++ packages = ["@octokit/rest"]
