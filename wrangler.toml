@@ -6,8 +6,13 @@ GITHUB_OWNER = "Aiky156"
 GITHUB_REPO = "tuchuangkangku"
 
 [build]
-command = ""
+command = "npm run build"
 
 [functions]
 bundle_path = "/functions"
-include_files = ["node_modules/**/*"] 
+include_files = ["node_modules/**/*"]
+
+[build.upload]
+format = "modules"
+main = "./dist/functions/api/index.js"
+dir = "dist/functions"

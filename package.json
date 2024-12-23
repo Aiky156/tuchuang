@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "wrangler pages dev public --port 4566",
-    "build": "npm install"
+    "build": "npm install && node build.js"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.0"
   },
   "devDependencies": {
-    "wrangler": "^3.99.0"
+    "wrangler": "^3.99.0",
+    "esbuild": "^0.19.0",
+    "esbuild-node-externals": "^1.9.0"
   },
   "bundleDependencies": [
     "@octokit/rest"
