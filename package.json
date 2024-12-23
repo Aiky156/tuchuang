@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "wrangler pages dev public --port 4566",
-    "build": "npm install && npm run build:functions",
-    "build:functions": "wrangler pages functions build --outdir=dist"
+    "build": "npm install"
   },
   "dependencies": {
     "@octokit/rest": "^20.0.0"
   },
   "devDependencies": {
     "wrangler": "^3.99.0"
-  }
+  },
+  "bundleDependencies": [
+    "@octokit/rest"
+  ]
 }
